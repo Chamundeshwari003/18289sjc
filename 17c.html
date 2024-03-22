@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styled Images</title>
+<style>
+  /* Image container */
+  .image-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Image styles */
+  .styled-image {
+    display: inline-block;
+    border: 2px solid #ccc; /* Border color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    transition: transform 0.3s ease;
+  }
+
+  /* Hover effect */
+  .styled-image:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+  }
+
+  /* Image filter */
+  .styled-image-filter {
+    filter: grayscale(50%); /* Grayscale filter */
+    transition: filter 0.3s ease;
+  }
+
+  /* Hover effect for filtered image */
+  .styled-image-filter:hover {
+    filter: grayscale(0%); /* Remove grayscale on hover */
+  }
+</style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="https://via.placeholder.com/300" alt="Image" class="styled-image">
+    <p>No Filter</p>
+  </div>
+
+  <div class="image-container">
+    <img src="https://via.placeholder.com/300" alt="Image" class="styled-image styled-image-filter">
+    <p>With Grayscale Filter</p>
+  </div>
+</body>
+</html>
